@@ -198,30 +198,28 @@ main h3 {
 .car__block .empty__button:hover {
   transform: translateY(-3px);
 }
-.modal__element {
-  min-width: 80%;
-  min-height: 75%;
+.modal__container__element {
   background-color: white;
+  min-width: 85%;
+  min-height: 60%;
   position: fixed;
-  left: 10%;
-  top: 15%;
-  box-shadow: 0px 5px 20px 5px #4343439d;
+  top: 20%;
+  left: 8%;
+  box-shadow: 0px 10px 20px 8px #43434385;
   display: none;
 }
-.modal__element div:nth-child(1) {
+.modal__container__element div:first-child {
   display: flex;
   justify-content: flex-end;
-}
-.modal__element div i {
-  cursor: pointer;
-  transition: 0.5s;
   color: #434343;
-  font-size: 26px;
-  background-color: transparent;
-  border: none;
-  margin: 10px 20px;
+  font-size: 24px;
 }
-.modal__element div i:hover {
+.modal__container__element div i {
+  margin: 10px 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.modal__container__element div i:hover {
   transform: rotate(90deg);
 }
 .show__modal {
