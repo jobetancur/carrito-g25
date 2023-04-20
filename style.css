@@ -200,15 +200,16 @@ main h3 {
 }
 .modal__container__element {
   background-color: white;
-  min-width: 85%;
-  min-height: 60%;
+  width: 85%;
+  max-width: 1000px;
+  min-height: 65%;
   position: fixed;
-  top: 20%;
-  left: 8%;
+  top: 13%;
+  left: 20%;
   box-shadow: 0px 10px 20px 8px #43434385;
   display: none;
 }
-.modal__container__element div:first-child {
+.modal__container__element .close {
   display: flex;
   justify-content: flex-end;
   color: #434343;
@@ -225,11 +226,167 @@ main h3 {
 .show__modal {
   display: block;
 }
+.principal__element {
+  display: flex;
+  justify-content: space-around;
+}
+.first__modal__text p:first-child {
+  font-size: 26px;
+  color: #434343;
+  margin-bottom: 20px;
+}
+.first__modal__text p:last-child {
+  font-size: 28px;
+  color: #434343;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.first__modal__colors p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.first__modal__colors div {
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 40px;
+  
+}
+.first__modal__colors div:hover {
+  border: solid 1px #274671;
+}
+.first__modal__sizes__text div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.first__modal__sizes__text div p:first-child {
+  font-size: 18px;
+}
+.first__modal__sizes__text div p:last-child {
+  font-size: 14px;
+  color: #434343;
+}
+.first__modal__colors div img {
+  width: 100px;
+}
+.first__modal__sizes {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.first__modal__sizes div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 40px;
+}
+.first__modal__sizes div:hover {
+  border: solid 1px #274671;
+  transform: scale(1.1);
+}
+.second__modal__section {
+  position: relative;
+  z-index: 1;
+}
+.first__modal__sizes div p {
+  font-size: 18px;
+  color: #434343;
+}
+.second__modal__section img {
+  width: 350px;
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+.second__modal__section div {
+  background-color: #eb4a5a;
+  width: 200px;
+  height: 400px;
+  position: relative;
+}
+@media screen and (max-width: 1550px){
+  .modal__container__element {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 1300px){
+  .modal__container__element {
+    left: 9%;
+  }
+}
+@media screen and (max-width: 992px){
+  .first__modal__sizes__text {
+    max-width: 300px;
+  }
+  .first__modal__sizes {
+    max-width: 300px;
+    gap: 20px;
+  }
+  .first__modal__sizes div {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 768px){
   .car__block {
     width: 70%;
   }
   .nav__car__visible {
     left: 30%;
+  }
+  .first__modal__sizes__text {
+    max-width: 100%;
+  }
+  .first__modal__sizes {
+    max-width: 100%;
+  }
+  .principal__element {
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .modal__container__element {
+    top: 10%;
+  }
+  .first__modal__text p:first-child {
+    margin-bottom: 10px;
+  }
+  .first__modal__text p:last-child {
+    margin-bottom: 10px;
+  }
+  .first__modal__colors div {
+    margin-bottom: 10px;
+  }
+  .first__modal__sizes__text div {
+    margin-bottom: 10px;
+  }
+  .second__modal__section {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  .second__modal__section div {
+    height: 320px;
+  }
+  .second__modal__section img {
+    top: 0%;
+    width: 320px;
+  }
+}
+@media screen and (max-width: 450px){
+  .first__modal__text p:first-child {
+    font-size: 22px;
+  }
+  .first__modal__text p:last-child {
+    font-size: 24px;
+  }
+  .modal__container__element {
+    top: 7.9%;
   }
 }

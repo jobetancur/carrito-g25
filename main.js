@@ -206,7 +206,65 @@ function modalDetailsElement(product){
     price: product.querySelector('.product__container__price p').textContent,
   }]
   modalDetails = [...infoDetails]
-  
+  modalHTML();
+}
+
+function modalHTML() {
+
+  let modalDetailsHTML = "";
+
+  for(let element of modalDetails){
+    modalDetailsHTML += `
+      <div class="principal__element">
+        <div class="first__modal__section">
+          <div class="first__modal__text">
+            <p>${element.name}</p>
+            <p>${element.price}</p>
+          </div>
+          <div class="first__modal__colors">
+            <p>Colores</p>
+            <div>
+              <img src="${element.image}">
+            </div>
+          </div>
+          <div class="first__modal__sizes__text">
+            <div>
+              <p>Tallas</p>
+              <p>Guía de tallas</p>
+            </div>
+          </div>
+          <div class="first__modal__sizes">
+            <div>
+              <p>S</p>
+            </div>
+            <div>
+              <p>M</p>
+            </div>
+            <div>
+              <p>L</p>
+            </div>
+            <div>
+              <p>XL</p>
+            </div>
+            <div>
+              <p>2XL</p>
+            </div>
+            <div>
+              <p>3XL</p>
+            </div>
+          </div>
+        </div>
+        <div class="second__modal__section">
+          <div class="modal__vector"></div>
+          <img src="${element.image}">
+          
+        </div>
+      </div>
+    `;
+  }
+
+  modalElement.innerHTML = modalDetailsHTML;
+
 }
 
 //* Local Storage
